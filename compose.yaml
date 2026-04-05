@@ -5,9 +5,8 @@ x-common-settings: &enable-cuda-jetson
   shm_size: '1gb'
 
 services:
-  segmenter:
+  project:
     <<: *enable-cuda-jetson
-    build: segmenter
+    build: project
     volumes: 
-      - ./segmenter:/app
-    command: sleep infinity
+      - ./project:/app
