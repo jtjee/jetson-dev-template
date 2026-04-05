@@ -1,0 +1,13 @@
+x-common-settings: &enable-cuda-jetson
+  environment:
+    - NVIDIA_VISIBLE_DEVICES=all
+  runtime: nvidia
+  shm_size: '1gb'
+
+services:
+  segmenter:
+    <<: *enable-cuda-jetson
+    build: segmenter
+    volumes: 
+      - ./segmenter:/app
+    command: sleep infinity

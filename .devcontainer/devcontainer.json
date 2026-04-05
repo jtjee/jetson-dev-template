@@ -1,0 +1,15 @@
+{
+    "name": "project",
+    "dockerComposeFile": "../compose.yaml",
+    "service": "project",
+    "workspaceFolder": "/app",
+    "overrideCommand": true,
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance"
+            ]
+        }
+    }
+}
